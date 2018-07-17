@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoveCalculator.View1">
+  <ContentView.Content>
+        <StackLayout>
+            <Label Text="Relationship" TextColor="#ADB2BB" />
+            <Label Text="{RelationshipResult}" TextColor="#B92626" />
+            <Label Text="Meaning" TextColor="#ADB2BB" />
+            <Label Text="Relationship" TextColor="#ADB2BB" />
+            <Label Text="{ResultMeaning}" TextColor="#B92626" />
+            <Label Text="Developed by {Developer's name}", TextColor = "#000000" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

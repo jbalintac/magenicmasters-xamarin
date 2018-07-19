@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoveCalculatorPCL"
+             x:Class="LoveCalculatorPCL.MainPage">
+    <StackLayout Orientation="Vertical" Padding="20,20,20,20" BackgroundColor="#FFFFFF">
+        <Image Source="heart.png" />
+        <Label Text="LOVE CALCULATOR" HorizontalOptions="Center" TextColor="#B92626" FontSize="Large"/>
+        <Entry x:Name="YourName" Placeholder="Your Name" TextColor="#000000" PlaceholderColor="#ADB2BB"></Entry>
+        <Entry x:Name="PartnerName" Placeholder="Partner's Name" TextColor="#000000" PlaceholderColor="#ADB2BB"></Entry>
+        <Button Text="Check Flames" TextColor="#FFFFFF" BackgroundColor="#B92626" Clicked="CheckFlames_Clicked"></Button>
+        <ContentView x:Name="ResultView" BackgroundColor="#FFDDDD" IsVisible="False">
+            <StackLayout>
+                <Label Text="Relationship" HorizontalOptions="Center" TextColor="#ADB2BB" />
+                <Label x:Name="RelationshipResult" Text="" HorizontalOptions="Center" TextColor="#B92626" />
+                <Label Text="Meaning" HorizontalOptions="Center" TextColor="#ADB2BB" />
+                <Label x:Name="MeaningResult"  Text="" HorizontalOptions="Center" TextColor="#B92626" />
+            </StackLayout>
+        </ContentView>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Label Text="Developed by Jordan" HorizontalOptions="Center" TextColor="#000000" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator.Android", "Ti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator.iOS", "TipCalculator\TipCalculator.iOS\TipCalculator.iOS.csproj", "{BA1A5FD3-6E55-496F-8032-C941EBFABC50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator", "TipCalculator\TipCalculator\TipCalculator.csproj", "{7DDF06DA-BBD2-45E3-A337-4CFA56AD4C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipCalculator", "TipCalculator\TipCalculator\TipCalculator.csproj", "{7DDF06DA-BBD2-45E3-A337-4CFA56AD4C81}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FamousScientists"
+             x:Class="FamousScientists.MainPage"
+             Title="Famous Scientists">
+    <ContentPage.Resources>
+        <Style TargetType="TableView">
+            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            <Setter Property="Margin" Value="2,2,2,2"/>
+        </Style>
+    </ContentPage.Resources>
+        <!--<ScrollView>-->
+            <TableView x:Name="TableView">
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Sir Isaac Newton</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Louis Pasteur</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Galileo</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Marie Curie</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Albert Einstein</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Charles Darwin</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Otto Hahn</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Nikola Tesla</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">James Clerk Maxwell</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell Tapped="ViewCell_Clicked">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Style="{DynamicResource ListItemDetailTextStyle}" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="CenterAndExpand">Aristotle</Label>
+                                <Image Grid.Row="0" Source="arrow.png" Grid.Column="1" HorizontalOptions="End"></Image>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        <!--</ScrollView>-->
+</ContentPage>

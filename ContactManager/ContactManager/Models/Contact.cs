@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace ContactManager.Model
+namespace ContactManager.Models
 {
     [Serializable]
     public class Contact : INotifyPropertyChanged

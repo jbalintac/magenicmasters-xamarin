@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactManager.Views.InitializePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Image" x:Key="Header">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="Margin" Value="10,40,10,0"></Setter>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="Body">
+                <Setter Property="BackgroundColor" Value="#4949FB"></Setter>
+            </Style>
+            <Style TargetType="Button" x:Key="Proceed">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="BackgroundColor" Value="#FF0000"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="Status">
+                <Setter Property="Margin" Value="40,150,40,0"></Setter>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="Start"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="Footer">
+                <Setter Property="Margin" Value="10,10,10,10"></Setter>
+                <Setter Property="TextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Style="{DynamicResource Body}">
+            <Image Source="call_me_maybe.png" Style="{StaticResource Header}"></Image>
+            <Label Text="{Binding LoadingStatus}" Style="{StaticResource Status}"/>
+            <Button Text="PROCEED" Command="{Binding Proceed}" IsVisible="{Binding ProceedVisible}" Style="{StaticResource Proceed}"/>
+            <Label Text="develop by DAN" Style="{StaticResource Footer}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

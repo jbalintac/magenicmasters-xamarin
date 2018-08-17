@@ -1,4 +1,5 @@
-﻿using ContactManager.Models;
+﻿using ContactManager.Interfaces;
+using ContactManager.Models;
 using ContactManager.Views;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace ContactManager.ViewModels
             get { return contacts; }
         }
 
-        public ContactListViewModel()
+        public ContactListViewModel(IDialerService dialerService)
         {
 
             AddContact = new Command<string>(async (key) =>
@@ -124,13 +125,16 @@ namespace ContactManager.ViewModels
 
             DialContact = new Command<Contact>((c) =>
             {
-                DialpadDisplay = c.ContactNumber;
-                SwitchToDialPage();
+                //DialpadDisplay = c.ContactNumber;
+                //SwitchToDialPage();
+                dialerService.DialPhoneNumber(c.ContactNumber);
+                //Device.OpenUri(new Uri($"tel://{c.ContactNumber}"));
             });
 
             CallContact = new Command(() =>
             {
-                Device.OpenUri(new Uri($"tel:{DialpadDisplay}"));
+                dialerService.DialPhoneNumber(DialpadDisplay);
+                //Device.OpenUri(new Uri($"tel://{DialpadDisplay}"));
             });
 
             DialpadDisplay = "";

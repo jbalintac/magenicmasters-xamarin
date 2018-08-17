@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using ContactManager.Droid.Services;
 
 namespace ContactManager.Droid
 {
@@ -20,7 +21,7 @@ namespace ContactManager.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            LoadApplication(new App(new DialerService()));
         }
     }
 }

@@ -66,9 +66,16 @@ namespace ContactManager.Models
                 {
                     isFavorite = value;
                     OnPropertyChanged("IsFavorite");
+                    OnPropertyChanged("IsNotFavorite");
                 }
             }
             get { return isFavorite; }
+        }
+
+
+        public bool IsNotFavorite
+        {
+            get { return !isFavorite; }
         }
 
 

@@ -1,3 +1,4 @@
+using ContactManager.Interfaces;
 using ContactManager.Views;
 using System;
 using Xamarin.Forms;
@@ -8,10 +9,10 @@ namespace ContactManager
 {
 	public partial class App : Application
 	{
-		public App ()
+		public App (IDialerService dialerService)
 		{
 			InitializeComponent();
-            MainPage = new NavigationPage(new InitializePage());
+            MainPage = new NavigationPage(new InitializePage(dialerService));
 		}
 
 		protected override void OnStart ()

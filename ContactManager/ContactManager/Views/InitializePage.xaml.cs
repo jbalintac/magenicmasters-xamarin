@@ -1,4 +1,5 @@
-﻿using ContactManager.ViewModels;
+﻿using ContactManager.Interfaces;
+using ContactManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,11 @@ namespace ContactManager.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InitializePage : ContentPage
     {
-		public InitializePage ()
+		public InitializePage (IDialerService dialerService)
 		{
 			InitializeComponent();
 
-            var model = new LoaderViewModel();
+            var model = new LoaderViewModel(dialerService);
             model.Navigation = Navigation;
 
             BindingContext = model;

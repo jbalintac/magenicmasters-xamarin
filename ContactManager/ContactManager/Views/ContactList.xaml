@@ -4,7 +4,8 @@
              x:Class="ContactManager.Views.ContactList"
              x:Name="ContactListViewModel"
              NavigationPage.HasNavigationBar="False"
-             BarBackgroundColor="#4949FB">
+             BarBackgroundColor ="#4949FB"
+             BarTextColor="#FFFFFF">
     <!--Pages can be added as references or inline-->
     <ContentPage Title="CONTACTS">
         <ContentPage.Resources>
@@ -53,6 +54,11 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
+                                <Grid.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="iOS" Value="30" />
+                                    </OnPlatform>
+                                </Grid.HeightRequest>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto" />
                                 </Grid.RowDefinitions>
@@ -63,7 +69,7 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="contact_circle.png" Grid.Row="0" Grid.Column="0"></Image>
+                                <Image Source="contact_circle_small.png" Grid.Row="0" Grid.Column="0"></Image>
                                 <StackLayout HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
                                     <Label Text="{Binding FirstName}" HorizontalOptions="Start" Style="{StaticResource Name}"></Label>
                                     <Label Text="{Binding LastName}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" Style="{StaticResource Name}"></Label>
@@ -73,7 +79,7 @@
                                             Style="{StaticResource CommandButton}"
                                             Command="{Binding Source={x:Reference ContactListViewModel}, Path=BindingContext.FavoriteContact}"
                                             CommandParameter="{Binding .}"></Button>
-                                    <Button Image="contact_favoriteborder.png"  IsVisible="{Binding !IsFavorite}" 
+                                    <Button Image="contact_favoriteborder.png"  IsVisible="{Binding IsNotFavorite}" 
                                            Style="{StaticResource CommandButton}"
                                             Command="{Binding Source={x:Reference ContactListViewModel}, Path=BindingContext.FavoriteContact}"
                                             CommandParameter="{Binding .}"></Button>
@@ -87,7 +93,7 @@
                                 <MenuItem Text="Edit" Command="{Binding Source={x:Reference ContactListViewModel}, Path=BindingContext.EditContact}"
                                             CommandParameter="{Binding .}"></MenuItem>
                                 <MenuItem Text="Delete" Command="{Binding Source={x:Reference ContactListViewModel}, Path=BindingContext.DeleteContact}"
-                                            CommandParameter="{Binding .}"></MenuItem>
+                                            CommandParameter="{Binding .}" IsDestructive="True"></MenuItem>
                             </ViewCell.ContextActions>
                         </ViewCell>
                     </DataTemplate>

@@ -1,4 +1,5 @@
-﻿using ContactManager.Models;
+﻿using ContactManager.Interfaces;
+using ContactManager.Models;
 using ContactManager.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace ContactManager.Views
     public partial class ContactList : TabbedPage
     {
 
-        public ContactList ()
+        public ContactList (IDialerService dialerService)
         {
             InitializeComponent();
-            var model = new ContactListViewModel();
+            var model = new ContactListViewModel(dialerService);
             model.Navigation = Navigation;
 
             model.SwitchToDialPage = () =>

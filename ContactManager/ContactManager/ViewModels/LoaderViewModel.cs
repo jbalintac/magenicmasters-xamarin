@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Net.Http;
 using Newtonsoft.Json;
+using ContactManager.Interfaces;
 
 namespace ContactManager.ViewModels
 {
@@ -19,22 +20,23 @@ namespace ContactManager.ViewModels
         List<Contact> contacts;
         bool proceedVisible;
         readonly DataService dataService = new DataService();
+        readonly IDialerService dialerService;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         // Constructor
-        public LoaderViewModel()
+        public LoaderViewModel(IDialerService dialerService)
         {
+            this.dialerService = dialerService;
+
             Proceed = new Command<string>(async (key) =>
             {
-                var page = new ContactList();
+                var page = new ContactList(dialerService);
                 contacts.ForEach(c => ((ContactListViewModel)page.BindingContext).Contacts.Add(c));
 
                 await Navigation.PushAsync(page);
                 // Add the key to the input string.
             });
-
-
 
             Task.Run(async () => await LoadDataAsync());
         }
@@ -50,7 +52,7 @@ namespace ContactManager.ViewModels
             if (result.IsSuccessStatusCode)
             {
                 Xamarin.Forms.Device.BeginInvokeOnMainThread(async () => {
-                    var page = new ContactList();
+                    var page = new ContactList(dialerService);
                     contacts.ForEach(c => ((ContactListViewModel)page.BindingContext).Contacts.Add(c));
                     await Navigation.PushAsync(page);
                 });
